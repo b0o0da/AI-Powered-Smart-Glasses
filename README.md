@@ -1,2 +1,1 @@
-# AI-Powered Smart Glasses
 
