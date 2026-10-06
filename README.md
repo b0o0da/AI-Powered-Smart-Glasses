@@ -212,23 +212,14 @@ No custom hardware. The project needs one good Android phone and a few cheap acc
 
 ## 7. Team of 6 — Responsibilities
 
-| Member | Strengths | Role |
-|---|---|---|
-| **Mostafa Moko** | OCR, YOLO | Computer vision: detection, tracking, OCR, near/far estimate, on-phone model optimization |
-| **Boda** | LLM, TTS, STT | Voice stack, intents, VLM/LLM prompts; pairs on the Android voice flow |
-| **Mostafa Sayed** | Backend | FastAPI backend, Docker, deployment; Android lead (provisional) |
-| **Mahmoud** | Databases, analysis, ML, DL | Database, datasets and labeling, training and evaluation |
-| **Marwan** | AI diploma | Priority engine, navigation, audio and haptic cues, currency and face models |
-| **Loay** | Adaptable | Integration, test devices, QA, field tests, mock screens, demo, documentation |
-
-**Open gap:** Android/Kotlin experience (the heart of the project) must be settled in month 1. Two people should write Kotlin. See `TEAM_TASKS_EN.md` for every person's step-by-step tasks and who waits for whom.
-
-**Pairing:**
-- Mostafa Sayed and Boda pair on Android.
-- Marwan and Mostafa Moko pair on events and the engine.
-- Mahmoud and Loay pair on datasets, evaluation sets and test scenarios.
-- Hold a short **weekly integration demo** so nobody works for months on something that does not connect.
-
+| Member           \|Strengths                  \|Role                                                                                                                                                                                 \|
+\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\|
+\|\*\*Mostafa Sayed\*\*\|Android, Backend, FastAPI  \|\*\*Android Core \+ Backend & Integration\*\* — Kotlin, Jetpack Compose, CameraX, permissions, app architecture, FastAPI, APIs, Docker, deployment, and system integration                \|
+\|\*\*Loay\*\*         \|Android, Integration       \|\*\*Android Core \+ Screen Intelligence\*\* — Kotlin, CameraX, audio/UI integration, AccessibilityService, MediaProjection, screen extraction and interaction                             \|
+\|\*\*Mostafa Amr\*\*  \|Computer Vision, Navigation\|\*\*Computer Vision \+ Navigation & Safety\*\* — YOLO, object/person/vehicle detection, tracking, OCR, distance/direction, approaching\-vehicle logic, GPS, navigation, and emergency flows\|
+\|\*\*Marwan\*\*       \|Computer Vision, AI        \|\*\*Computer Vision \+ Screen Intelligence\*\* — detection/tracking, CV integration, AccessibilityService, screen understanding, OCR, and screen\-related AI flows                         \|
+\|\*\*Boda\*\*         \|Voice, AI, Navigation      \|\*\*Voice & AI \+ Navigation & Safety\*\* — wake word, STT, TTS, intents, VLM/LLM interaction, voice\-controlled navigation, emergency commands, and safety interaction                    \|
+\|\*\*Mahmoud\*\*      \|AI, Backend, Databases     \|\*\*Voice & AI \+ Backend & Integration\*\* — intents, AI interaction, voice integration, APIs, databases, AI services, and backend support                                               \|
 ---
 
 ## 8. Team Workflow
