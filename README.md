@@ -212,14 +212,15 @@ No custom hardware. The project needs one good Android phone and a few cheap acc
 
 ## 7. Team of 6 — Responsibilities
 
-| Member           \|Strengths                  \|Role                                                                                                                                                                                 \|
-\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\|
-\|\*\*Mostafa Sayed\*\*\|Android, Backend, FastAPI  \|\*\*Android Core \+ Backend & Integration\*\* — Kotlin, Jetpack Compose, CameraX, permissions, app architecture, FastAPI, APIs, Docker, deployment, and system integration                \|
-\|\*\*Loay\*\*         \|Android, Integration       \|\*\*Android Core \+ Screen Intelligence\*\* — Kotlin, CameraX, audio/UI integration, AccessibilityService, MediaProjection, screen extraction and interaction                             \|
-\|\*\*Mostafa Amr\*\*  \|Computer Vision, Navigation\|\*\*Computer Vision \+ Navigation & Safety\*\* — YOLO, object/person/vehicle detection, tracking, OCR, distance/direction, approaching\-vehicle logic, GPS, navigation, and emergency flows\|
-\|\*\*Marwan\*\*       \|Computer Vision, AI        \|\*\*Computer Vision \+ Screen Intelligence\*\* — detection/tracking, CV integration, AccessibilityService, screen understanding, OCR, and screen\-related AI flows                         \|
-\|\*\*Boda\*\*         \|Voice, AI, Navigation      \|\*\*Voice & AI \+ Navigation & Safety\*\* — wake word, STT, TTS, intents, VLM/LLM interaction, voice\-controlled navigation, emergency commands, and safety interaction                    \|
-\|\*\*Mahmoud\*\*      \|AI, Backend, Databases     \|\*\*Voice & AI \+ Backend & Integration\*\* — intents, AI interaction, voice integration, APIs, databases, AI services, and backend support                                               \|
+| Member            | Main Area                     | Purpose                                                                                                                                                            | Essential? |
+| ----------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| **Mostafa Sayed** | Android + Backend             | Android architecture, Kotlin, Jetpack Compose, CameraX, permissions, FastAPI, APIs, Docker, deployment, and system integration                                     | Essential  |
+| **Loay**          | Screen Intelligence + Android | AccessibilityService, MediaProjection, screen extraction, screen interaction, CameraX, audio/UI integration, and Android development                               | Essential  |
+| **Mostafa omar**   | Computer Vision + Navigation  | YOLO detection, object/person/vehicle tracking, OCR, distance and direction estimation, approaching-vehicle detection, GPS, navigation, and emergency safety flows | Essential  |
+| **Marwan**        | Computer Vision + Screen AI   | Object/person detection, tracking, CV integration, OCR, AccessibilityService, screen understanding, and screen-related AI flows                                    | Essential  |
+| **Boda**          | Voice AI + Navigation         | Wake word, STT, TTS, intent recognition, VLM/LLM interaction, voice-controlled navigation, emergency commands, and safety interaction                              | Essential  |
+| **Mahmoud**       | AI + Backend + Database       | Intent handling, AI interaction, voice integration, APIs, databases, AI services, and backend support                                                              | Essential  |
+    
 ---
 
 ## 8. Team Workflow
