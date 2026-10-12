@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avn.local/contracts/common.schema.json",
+  "title": "AVN shared enums and primitives",
+  "$defs": {
+    "Source": { "enum": ["camera", "voice", "screen", "navigation", "notification", "system"] },
+    "EventType": {
+      "enum": [
+        "vehicle_approaching", "obstacle_ahead", "person_close", "person_known", "person_unknown",
+        "scene_answer", "text_result", "screen_summary", "notification", "nav_instruction",
+        "system_notice", "sos_countdown"
+      ]
+    },
+    "Side": { "enum": ["left", "center", "right"] },
+    "DistanceBand": { "enum": ["near", "medium", "far"] },
+    "Level": { "enum": ["critical", "warning", "info"] },
+    "ScreenType": { "enum": ["chat_list", "chat_thread", "feed_post", "other", "blocked"] },
+    "PlanStep": {
+      "enum": [
+        "launch_app", "wait", "read_screen", "summarize", "scroll", "back",
+        "tap_label", "navigate", "sos", "describe", "ask"
+      ]
+    },
+    "TimestampMs": { "type": "integer", "minimum": 0, "description": "Unix epoch milliseconds" },
+    "Confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "Language": { "type": "string", "enum": ["en", "ar"] },
+    "ImageJpegBase64": {
+      "type": "string",
+      "maxLength": 400000,
+      "description": "Base64 JPEG, longest side 512-768 px. Personal data: never logged or stored."
+    },
+    "Context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "enum": ["idle", "walking", "navigating", "reading", "screen"] },
+        "navigation_active": { "type": "boolean" },
+        "language": { "$ref": "#/$defs/Language" },
+        "recent_events": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "LatLon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lat", "lon"],
+      "properties": {
+        "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+        "lon": { "type": "number", "minimum": -180, "maximum": 180 }
+      }
+    }
+  }
+}
