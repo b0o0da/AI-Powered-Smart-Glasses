@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "fallback": false,
+  "message": "",
+  "data": {
+    "steps": [
+      {
+        "step": "launch_app",
+        "arg": "WhatsApp"
+      },
+      {
+        "step": "wait",
+        "arg": null
+      },
+      {
+        "step": "read_screen",
+        "arg": null
+      }
+    ],
+    "requires_confirmation": false,
+    "spoken_ack": "Opening WhatsApp.",
+    "clarification": null
+  },
+  "request_id": "req_int_1"
+}
