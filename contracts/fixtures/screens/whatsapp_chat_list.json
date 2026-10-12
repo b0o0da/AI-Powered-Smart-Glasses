@@ -1,0 +1,47 @@
+{
+  "package": "com.whatsapp",
+  "screen_type": "chat_list",
+  "nodes": [
+    {
+      "text": "Ahmed",
+      "content_description": null,
+      "view_id": "conversations_row_contact_name",
+      "class_name": "android.widget.TextView",
+      "clickable": true,
+      "scrollable": false,
+      "is_password": false,
+      "bounds": [
+        0,
+        200,
+        1080,
+        320
+      ]
+    },
+    {
+      "text": "See you tomorrow at the lecture",
+      "content_description": null,
+      "view_id": "single_msg_tv",
+      "class_name": "android.widget.TextView",
+      "clickable": false,
+      "scrollable": false,
+      "is_password": false,
+      "bounds": [
+        0,
+        260,
+        1080,
+        320
+      ]
+    }
+  ],
+  "text": "Ahmed. See you tomorrow at the lecture.",
+  "clickable_labels": [
+    "Ahmed",
+    "New chat"
+  ],
+  "flags": {
+    "secure": false,
+    "empty": false,
+    "unlabeled": false,
+    "deny_listed": false
+  }
+}
