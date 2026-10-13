@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AVN Assistant</string>
+    <string name="accessibility_description">Reads the text of the screen you ask about and performs the scroll, back and tap actions you request by voice. It never reads password or banking screens and never sends, deletes, buys or pays.</string>
+    <string name="service_channel">Assistant</string>
+    <string name="service_running">AVN assistant is running</string>
+</resources>
