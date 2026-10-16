@@ -70,4 +70,4 @@ jobs:
         working-directory: android
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug test lint --no-daemon
+          ./gradlew assembleDebug check --no-daemon

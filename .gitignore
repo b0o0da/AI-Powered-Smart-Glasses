@@ -26,12 +26,13 @@ __pycache__/
 .venv/
 venv/
 .pytest_cache/
+*.egg-info/
 .mypy_cache/
 .ruff_cache/
 .coverage
 htmlcov/
 
-# --- Models (fetched by scripts/fetch_models.sh, never committed) ---
+# --- Models (fetched by scripts/fetch_models.py, never committed) ---
 *.tflite
 *.onnx
 *.pt

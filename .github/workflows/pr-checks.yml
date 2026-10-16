@@ -1,0 +1,57 @@
+name: PR checks
+
+# These two job names are required status checks in scripts/setup_branch_protection.sh.
+# Renaming a job here means updating that script too, or PRs can never merge.
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+    branches: [develop, main]
+
+permissions:
+  contents: read
+
+jobs:
+  title:
+    name: Title has a Notion task ID
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR title
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+          HEAD: ${{ github.head_ref }}
+          BASE: ${{ github.base_ref }}
+        run: |
+          # Gate merges (develop or release/* into main) may use "Gate N: ..." or "Release ...".
+          if [ "$BASE" = "main" ] && { [ "$HEAD" = "develop" ] || [[ "$HEAD" == release/* ]]; }; then
+            if [[ "$TITLE" =~ ^(AVN-[0-9]+|Gate\ [1-4]|Release)[:\ ] ]]; then exit 0; fi
+          fi
+          if [[ "$TITLE" =~ ^AVN-[0-9]+:\ .+ ]]; then
+            echo "OK: $TITLE"
+          else
+            echo "::error::PR title must start with the Notion task ID, e.g. 'AVN-123: Add FakeDetector'. Got: '$TITLE'"
+            exit 1
+          fi
+
+  branch:
+    name: Branch name follows docs/branching.md
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch name
+        env:
+          HEAD: ${{ github.head_ref }}
+          BASE: ${{ github.base_ref }}
+        run: |
+          AREAS='android|backend|engine|cv|voice|screen|data|test'
+          if [[ "$HEAD" =~ ^(feature|fix)/($AREAS)-[a-z0-9][a-z0-9-]*$ ]]; then
+            echo "OK: $HEAD"; exit 0
+          fi
+          if [ "$BASE" = "main" ] && { [ "$HEAD" = "develop" ] || [[ "$HEAD" =~ ^release/gate-[1-4]$ ]]; }; then
+            echo "OK: $HEAD -> main"; exit 0
+          fi
+          if [ "$BASE" = "develop" ] && [[ "$HEAD" =~ ^release/gate-[1-4]$ ]]; then
+            echo "OK: back-merge $HEAD"; exit 0
+          fi
+          if [[ "$HEAD" == dependabot/* ]]; then exit 0; fi
+          echo "::error::Branch '$HEAD' does not follow docs/branching.md: use feature/<area>-<description> or fix/<area>-<description>, area one of: ${AREAS//|/, }"
+          exit 1

@@ -1,0 +1,25 @@
+name: Blocker
+description: Work cannot continue because of another task, a device, a key or a decision.
+labels: ["type:blocker", "blocked"]
+body:
+  - type: input
+    id: task
+    attributes:
+      label: Blocked task
+      description: AVN-xxx (Notion link)
+    validations:
+      required: true
+  - type: input
+    id: waiting
+    attributes:
+      label: Waiting on
+      description: Task, person, device or Technical Decision (TD-xxx)
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Which gate is at risk, and is a mock or fake possible meanwhile?
+    validations:
+      required: true
