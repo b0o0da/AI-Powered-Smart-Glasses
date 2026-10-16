@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avn.local/contracts/envelope.schema.json",
+  "title": "ApiEnvelope",
+  "description": "Every backend response. ok:false = request rejected (message is spoken-safe). fallback:true = provider failed or timed out; speak message. data holds the endpoint's response object or null.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ok", "fallback", "message", "data", "request_id"],
+  "properties": {
+    "ok": { "type": "boolean" },
+    "fallback": { "type": "boolean" },
+    "message": { "type": "string", "maxLength": 300 },
+    "data": { "type": ["object", "null"] },
+    "request_id": { "type": "string", "minLength": 1, "maxLength": 64 }
+  }
+}
