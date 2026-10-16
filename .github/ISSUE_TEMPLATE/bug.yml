@@ -1,0 +1,52 @@
+name: Bug
+description: Something is broken. Also log it in Notion (Bugs & Blockers) as BUG-xxx.
+labels: ["type:bug"]
+body:
+  - type: input
+    id: notion
+    attributes:
+      label: Notion bug or task
+      description: BUG-xxx or AVN-xxx link
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "critical: missed/false safety alert, crash, privacy leak, SOS failure"
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [android, backend, engine, cv, voice, screen, data, test]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Phone model, Android version, app build or commit
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Never paste camera frames, screen text, notification text, embeddings or coordinates.
+      render: text

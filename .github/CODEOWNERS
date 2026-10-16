@@ -1,0 +1,21 @@
+# Code owners are requested for review automatically (see docs/branching.md).
+# Only @b0o0da is a confirmed GitHub handle. Replace each TODO with the person's
+# real handle, then uncomment the line. A wrong handle makes GitHub ignore that line.
+# Once every line is filled in, set require_code_owner_reviews to true in
+# scripts/setup_branch_protection.sh and re-run it.
+
+*                           @b0o0da
+
+# /android/                 @TODO-mostafa-s @TODO-loay
+# /android/engine/          @TODO-marwan
+# /backend/                 @TODO-mostafa-s @TODO-mahmoud
+# /contracts/               @TODO-mostafa-s
+# /android/contracts/       @TODO-mostafa-s
+# /docs/api-contract.md     @TODO-mostafa-s
+# /computer_vision/         @TODO-mostafa-o
+# /models/                  @TODO-mostafa-o
+# /nlp/prompt_templates/    @TODO-boda @TODO-mahmoud
+# /datasets/                @TODO-mahmoud
+# /tests/                   @TODO-loay
+# /.github/                 @TODO-mostafa-s
+# /scripts/                 @TODO-mostafa-s
