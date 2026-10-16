@@ -6,16 +6,23 @@
 
 *                           @b0o0da
 
-# /android/                 @TODO-mostafa-s @TODO-loay
-# /android/engine/          @TODO-marwan
-# /backend/                 @TODO-mostafa-s @TODO-mahmoud
-# /contracts/               @TODO-mostafa-s
-# /android/contracts/       @TODO-mostafa-s
-# /docs/api-contract.md     @TODO-mostafa-s
-# /computer_vision/         @TODO-mostafa-o
-# /models/                  @TODO-mostafa-o
-# /nlp/prompt_templates/    @TODO-boda @TODO-mahmoud
-# /datasets/                @TODO-mahmoud
-# /tests/                   @TODO-loay
-# /.github/                 @TODO-mostafa-s
-# /scripts/                 @TODO-mostafa-s
+# /android/                                    @TODO-mostafa-s @TODO-loay
+# /android/app/src/main/kotlin/avn/app/camera/  @TODO-loay
+# /android/app/src/main/kotlin/avn/app/vision/  @TODO-mostafa-o @TODO-marwan
+# /android/engine/                              @TODO-marwan
+# /android/app/src/main/kotlin/avn/app/voice/   @TODO-boda
+# /android/app/src/main/kotlin/avn/app/screen/  @TODO-loay @TODO-marwan
+# /android/app/src/main/kotlin/avn/app/screen/notifications/  @TODO-marwan @TODO-loay
+# /android/app/src/main/kotlin/avn/app/navigation/     @TODO-mostafa-o @TODO-boda
+# /android/app/src/main/kotlin/avn/app/sos/     @TODO-boda
+# /android/contracts/                           @TODO-mostafa-s
+# /backend/                                     @TODO-mostafa-s @TODO-mahmoud
+# /contracts/                                   @TODO-mostafa-s
+# /docs/api-contract.md                         @TODO-mostafa-s
+# /computer_vision/                             @TODO-mostafa-o
+# /models/                                      @TODO-mostafa-o
+# /nlp/prompt_templates/                        @TODO-mahmoud @TODO-boda
+# /datasets/                                    @TODO-mahmoud
+# /tests/                                       @TODO-loay
+# /.github/                                     @TODO-mostafa-s
+# /scripts/                                     @TODO-mostafa-s

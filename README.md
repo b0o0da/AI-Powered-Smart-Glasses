@@ -21,19 +21,31 @@ Research prototype and assistive aid. Not a medical device, not a white-cane rep
 
 ## Repository layout
 
-| Folder | What it holds | Main owner |
+Owners follow the workstream table in `docs/architecture.md` §6 (primary first, then supporting).
+
+| Folder | What it holds | Owners |
 | --- | --- | --- |
-| `android/` | Kotlin + Compose app (`:app`, `:contracts`, `:engine`) | Mostafa S., Loay |
-| `backend/` | FastAPI service, providers, Docker | Mostafa S., Mahmoud |
-| `contracts/` | JSON schemas and fixtures shared by Android and backend | Mostafa S. |
-| `computer_vision/` | Detector training, export (LiteRT/ONNX), evaluation | Mostafa O. |
-| `nlp/prompt_templates/` | Versioned VLM/LLM prompts | Mahmoud |
-| `datasets/` | Download scripts and labeling guidelines (data itself is NOT in Git) | Mahmoud |
+| `android/` (app core) | Kotlin + Compose shell, services, permissions, DI, state (WS-03, WS-25) | Mostafa S., Loay |
+| `android/app/.../camera/` | CameraX frame pipeline (WS-04) | Loay, Mostafa S. |
+| `android/app/.../vision/` | Detection, tracking, near/far, OCR, faces, currency (WS-05–09) | Mostafa O., Marwan |
+| `android/engine/` | Priority and context engine, the only thing allowed to speak (WS-16) | Marwan, Mostafa O. |
+| `android/app/.../voice/` | Wake word, STT, TTS, intents and voice flow (WS-11–14) | Boda, Mahmoud, Loay |
+| `android/app/.../screen/` (incl. `notifications/`) | AccessibilityService, screen capture, notification reading (WS-17–19) | Loay, Marwan |
+| `android/app/.../navigation/` | GPS, routes, audio and haptic cues (WS-20) | Mostafa O., Boda |
+| `android/app/.../sos/` | SOS and emergency flow (WS-21) | Boda, Mostafa O. |
+| `android/contracts/` | Kotlin mirror of the shared contract (WS-02) | Mostafa S., Marwan |
+| `backend/` | FastAPI service, providers, Docker (WS-22, WS-23) | Mostafa S., Mahmoud |
+| `contracts/` | JSON schemas and fixtures shared by Android and backend (WS-02) | Mostafa S., Marwan, Mahmoud |
+| `computer_vision/` | Detector training, export (LiteRT/ONNX), evaluation (WS-05, WS-24) | Mostafa O., Marwan |
+| `nlp/prompt_templates/` | Versioned VLM/LLM prompts (WS-15) | Mahmoud, Boda |
+| `datasets/` | Download scripts and labeling guidelines (data itself is NOT in Git) (WS-24) | Mahmoud, Mostafa O. |
 | `models/` | `manifest.json` only (weights are fetched, never committed) | Mostafa O. |
-| `tests/` | Shared fixtures, E2E tests, mock screens | Loay |
-| `docs/` | Architecture, API contract, decisions, Claude Code prompts | Mahmoud (docs owner) |
-| `scripts/` | Tooling: model fetch, contract validation, GitHub setup | Mostafa S. |
-| `.github/` | CI, PR checks, PR template, issue forms, CODEOWNERS | Mostafa S. |
+| `tests/` | Shared fixtures, E2E tests, mock screens (WS-26) | Loay, Mahmoud |
+| `docs/` | Architecture, API contract, decisions, Claude Code prompts (WS-29) | Mahmoud, Loay |
+| `scripts/` | Tooling: model fetch, contract validation, GitHub setup (WS-01) | Mostafa S., Loay |
+| `.github/` | CI, PR checks, PR template, issue forms, CODEOWNERS (WS-01) | Mostafa S., Loay |
+
+Security, privacy and ethics (WS-28) is cross-cutting and owned by Marwan with Mahmoud.
 
 ## Branches and pull requests
 
