@@ -19,6 +19,7 @@ Stop and wait for approval.
 
 ```text
 Read backend/CLAUDE.md. Branch: feature/backend-mock.
+The foundation already exists (app factory, config, envelope, request-id middleware, error handlers, GET /health, Dockerfile, docker-compose.yml, tests). Extend it; do not recreate it.
 Build the FastAPI app with all 9 endpoints answering from MockProvider/MockMaps using contracts/fixtures/api/ as the canned data:
 - core/config with pydantic-settings reading .env; core/auth (X-API-Key, /health open); simple per-key rate limit; request_id middleware; JSON-lines logger that never logs payload content.
 - Envelope helper; global exception handler that returns ok:false with a spoken-safe message.
